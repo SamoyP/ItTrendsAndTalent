@@ -1,0 +1,212 @@
+<section class="hero is-medium is-primary is-bold" id="top">
+  <div class="hero-body" style="background: url('assets/images/testBackground.jpg') no-repeat;background-size: cover">
+    <!--<a [routerLink]="['/cms']">Dit is een test naar de cms</a>-->
+    <div class="container has-text-left" style="margin-left: 45%">
+      <h1 class="title" style="color: #FFFFFF">
+        {{getContent('4').title}}
+      </h1>
+      <!--#404040-->
+      <h2 class="subtitle" style="color: #FFFFFF">
+        {{getContent('4').content}}      </h2>
+    </div>
+  </div>
+</section>
+<section class="section" style="background-color: #f1f1f1" id="work" >
+  <div class="container has-text-centered">
+    <h1 class="title">{{getContent('5').title}}</h1>
+    <h2 class="subtitle">
+      {{getContent('5').content}}
+    </h2>
+    <div class="columns has-text-centered">
+      <div class="column">
+        <div class="card">
+          <div class="card-image has-text-right">
+            <figure class="has-text-centered" style="font-size: 10em;">
+              <i class="fas fa-calendar"></i>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              {{getContent('1').title}}<br>
+              {{getContent('1').content}}
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-image has-text-right">
+            <figure class="has-text-centered" style="font-size: 10em;">
+              <i class="fas fa-calendar"></i>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              {{getContent('2').title}}<br>
+              {{getContent('2').content}}
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-image has-text-right">
+            <figure class="has-text-centered" style="font-size: 10em;">
+              <i class="fas fa-calendar"></i>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              {{getContent('3').title}}<br>
+              {{getContent('3').content}}
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" style="background-color: #e5e5e5" id="foto">
+  <div class="container has-text-centered">
+    <h1 class="title">{{getContent('6').title}}</h1>
+    <h2 class="subtitle">
+      {{getContent('6').content}}
+    </h2>
+    <div class="columns">
+      <div class="column">
+        <div>
+          <img style="width: 300px; height: 300px; margin:2%" src="../assets/images/vloer.jpg" alt="Ne foto">
+        </div>
+      </div>
+      <div class="column">
+        <div>
+          <img style="width: 300px; height: 300px; margin:2%" src="../assets/images/nogEenVloer.jpg" alt="Ne foto">
+        </div>
+      </div>
+      <div class="column">
+        <div>
+          <img style="width: 300px; height: 300px; margin:2%" src="../assets/images/dampkap.jpg" alt="Ne foto">
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div>
+          <img style="width: 300px; height: 300px; margin:2%" src="../assets/images/parket.jpg" alt="Ne foto">
+        </div>
+      </div>
+      <div class="column">
+        <div>
+          <img style="width: 300px; height: 300px; margin:2%" src="../assets/images/Terras.jpg" alt="Ne foto">
+        </div>
+      </div>
+      <div class="column">
+        <div>
+          <img style="width: 300px; height: 300px; margin:2%" src="../assets/images/buitenVloer.jpg" alt="Ne foto">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container has-text-centered">
+    <h1 class="title">Contact</h1>
+  </div>
+  <div class="container has-text-centered" style="width: 40%">
+    <div class="field">
+    </div>
+    <form >
+      <div class="field">
+        <div class="control">
+          <input name="mail_mail" class="input" type="email" placeholder="Email" [(ngModel)]="mail_mail">
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <input name="mail_onderwerp" class="input" type="text" placeholder="Subject" [(ngModel)]="mail_onderwerp">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <textarea name="mail_bericht" [(ngModel)]="mail_bericht" class="textarea" type="text"></textarea>
+        </div>
+      </div>
+      <input  (click)="sendMail(mail_mail, mail_onderwerp, mail_bericht)" type="submit"class="button is-block is-info is-fullwidth" value="Send form"/>
+    </form>
+  </div>
+</section>
+<!--<section class="section">
+  <div class="container has-text-centered">
+    <h1 class="title">Contact</h1>
+    <h2 class="subtitle">
+      A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+    </h2>
+  </div>
+  <div class="columns is-centered">
+    <div class="column">
+      <form>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Name">
+                <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded has-icons-left has-icons-right">
+                <input class="input is-success" type="email" placeholder="Email" value="alex@smith.com">
+                <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+                <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded">
+                <input class="input" type="tel" placeholder="Your phone number">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label">
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <button class="button is-primary">
+                  Send message
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>-->
+

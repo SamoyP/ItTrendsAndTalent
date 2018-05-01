@@ -1,0 +1,27 @@
+<div class="modal" id="editContentModal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" aria-label="close" (click)="closeModal()"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" [(ngModel)]="content.title">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Content</label>
+        <div class="control">
+          <textarea class="input" [(ngModel)]="content.content"></textarea>
+        </div>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" (click)="updateContent()">Save changes</button>
+      <button class="button" (click)="closeModal()">Cancel</button>
+    </footer>
+  </div>
+</div>

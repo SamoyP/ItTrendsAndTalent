@@ -1,0 +1,23 @@
+
+<nav class="navbar is-transparent is-fixed-top" style="background-color: #2c2c2c; font-size: 20px;">
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start nav">
+      <a style="color: #FFFFFF;" class="navbar-item" href="#top">
+        <strong>Top</strong>
+      </a>
+      <a style="color: #FFFFFF;" class="navbar-item" href="#work">
+        <strong>Work</strong>
+      </a>
+      <a style="color: #FFFFFF;" class="navbar-item" href="#foto">
+        <strong>Foto's</strong>
+      </a>
+      <a style="color: #FFFFFF;" class="navbar-item" href="#contact">
+        <strong>Contact</strong>
+      </a>
+      <a [routerLink]="['/cms']" style="color: #FFFFFF;" class="navbar-item">
+        <strong>Login</strong>
+      </a>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
